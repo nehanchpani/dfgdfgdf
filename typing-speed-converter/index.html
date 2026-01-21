@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Converter: WPM to Key Depressions (KDPH) for SSC & Government Exams</title>
+    <meta name="description"
+        content="Convert Words Per Minute (WPM) to Key Depressions Per Hour (KDPH) instantly. Best free tool for SSC CGL, CHSL, and Govt typing exams. Accurate keystroke test converter.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical Tag -->
+    <link rel="canonical" href="https://jansevatools.github.io/tools/typing-speed-converter/">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Typing Speed Converter: WPM to KDPH for SSC Exams">
+    <meta property="og:description"
+        content="Struggling with SSC typing calculations? Convert WPM to Key Depressions Per Hour (KDPH) instantly with this free tool.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jansevatools.github.io/typing-speed-converter/">
+    <meta property="og:site_name" content="JanSeva Tools">
+
+    <!-- JSON-LD Schema (WebApplication) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Typing Speed Converter",
+      "description": "A free tool to convert Words Per Minute (WPM) to Key Depressions Per Hour (KDPH) for SSC and government typing exams.",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "featureList": "WPM to KDPH Conversion, SSC Typing Calculation",
+      "author": {
+          "@type": "Person",
+          "name": "Dinesh Pambra"
+      }
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What is 35 WPM in Key Depressions per Hour (KDPH)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "35 WPM is equal to 10,500 KDPH. You can check this instantly using our keystrokes per hour test converter."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How is KDPH calculated?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The formula is simple: KDPH = WPM × 5 × 60. This assumes 5 keystrokes make one word."
+        }
+      }]
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            /* Blue */
+            --primary-hover: #1d4ed8;
+            --bg-color: #f3f4f6;
+            /* Light Gray */
+            --card-bg: #ffffff;
+            --text-color: #1f2937;
+            /* Dark Gray */
+            --border-color: #e5e7eb;
+            --error-color: #dc2626;
+            /* Red */
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .tool-card {
+            background-color: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            margin-bottom: 2rem;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 500px;
+            /* Limit width of tool itself */
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        p.subtitle {
+            color: #6b7280;
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+        }
+
+        .input-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #374151;
+            font-size: 0.9rem;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            font-size: 1rem;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            -moz-appearance: textfield;
+            /* Remove arrows */
+        }
+
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type="number"]:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        input[type="number"].error-input {
+            border-color: var(--error-color);
+        }
+
+        .error-message {
+            color: var(--error-color);
+            font-size: 0.85rem;
+            margin-top: 0.4rem;
+            min-height: 1.25rem;
+            /* Reserve space */
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .error-message.visible {
+            opacity: 1;
+        }
+
+        .formula-box {
+            background-color: #eff6ff;
+            border: 1px solid #dbeafe;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            color: #1e40af;
+        }
+
+        .formula-box strong {
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        /* Content Section Styles */
+        .content-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            margin-top: 2rem;
+        }
+
+        .content-section h2 {
+            font-size: 1.5rem;
+            color: #1f2937;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .content-section p {
+            margin-bottom: 1rem;
+            color: #4b5563;
+        }
+
+        /* FAQ Styles */
+        details {
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 1rem;
+        }
+
+        summary {
+            cursor: pointer;
+            color: var(--primary-color);
+            font-weight: 600;
+            list-style: none;
+            position: relative;
+            padding-right: 20px;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: "+";
+            position: absolute;
+            right: 0;
+            font-weight: bold;
+        }
+
+        details[open] summary::after {
+            content: "-";
+        }
+
+        details p {
+            margin-top: 0.5rem;
+            color: #4b5563;
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #9ca3af;
+        }
+
+        @media (max-width: 480px) {
+            .tool-card {
+                padding: 1.5rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Main Tool -->
+        <div class="tool-card">
+            <div style="text-align: left; margin-bottom: 1rem;">
+                <a href="../index.html" style="text-decoration: none; color: #4b5563; font-weight: 600;">&larr; Home</a>
+            </div>
+            <h1>Typing Speed Converter</h1>
+            <p class="subtitle">WPM ⇄ Key Depressions (KDPH)</p>
+
+            <div class="input-group">
+                <label for="wpm">Words Per Minute (WPM)</label>
+                <input type="number" id="wpm" placeholder="e.g. 35" min="0" step="any">
+                <div id="wpm-error" class="error-message">Please enter a valid positive number.</div>
+            </div>
+
+            <div class="input-group">
+                <label for="kdph">Key Depressions Per Hour (KDPH)</label>
+                <input type="number" id="kdph" placeholder="e.g. 10500" min="0" step="any">
+                <div id="kdph-error" class="error-message">Please enter a valid positive number.</div>
+            </div>
+
+            <div class="formula-box">
+                <p><strong>Formula Used:</strong></p>
+                <p>KDPH = WPM × 5 × 60</p>
+                <p>1 Word = 5 Keystrokes</p>
+            </div>
+        </div>
+
+        <!-- Humanized Content Section -->
+        <div class="content-section">
+            <h2>Why I Made This Converter (SSC Aspirants, Listen Up!)</h2>
+            <p>Man, I remember preparing for my SSC CGL typing test. The notification said "27 WPM", but another line
+                mentioned "8000 Key Depressions". I was like, "Which one is it?" It was so confusing.</p>
+
+            <p>To be honest, calculating this manually is a pain. You have to multiply by 5, then by 60... math isn't my
+                strong suit when I'm stressed about typing!</p>
+
+            <p>So, I built this simple <strong>keystrokes per minute test</strong> converter. No fluff, no ads jumping
+                in your face. Just put in your WPM and get the KDPH instantly.</p>
+
+            <h3>How Accurate is this Keystroke Test?</h3>
+            <p>Look, the standard rule used by Staff Selection Commission (SSC) and most government bodies is: <strong>5
+                    Keystrokes = 1 Word</strong>. This tool uses exactly that formula. Whether you are checking your
+                <strong>keystrokes per hour test</strong> results or just curious about your speed, this is spot on.
+            </p>
+
+            <h3>Frequently Asked Questions</h3>
+
+            <details>
+                <summary>Q: What is the required KDPH for SSC CGL?</summary>
+                <p>Usually, for data entry, they ask for 8000 KDPH, which roughly translates to 26-27 Words Per Minute
+                    (WPM). You can verify this by typing "27" in the WPM box above.</p>
+            </details>
+
+            <details>
+                <summary>Q: Does Backspace count as a keystroke?</summary>
+                <p>Ah, the golden question! In most exams, yes, every key press counts. But for speed calculation (Net
+                    Speed), only correct words matter. This tool converts pure speed based on the standard formula.</p>
+            </details>
+
+            <details>
+                <summary>Q: Can I use this for Keystrokes Per Minute?</summary>
+                <p>Technically, <strong>keystrokes per minute</strong> is just WPM x 5. While this tool shows "Per Hour"
+                    (because that's what exams ask), you can easily get an idea of your minute-level speed too.</p>
+            </details>
+        </div>
+
+        <footer>
+            &copy; <span id="year"></span> JanSeva Tools
+        </footer>
+    </div>
+
+    <script>
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const wpmInput = document.getElementById('wpm');
+        const kdphInput = document.getElementById('kdph');
+        const wpmError = document.getElementById('wpm-error');
+        const kdphError = document.getElementById('kdph-error');
+
+        // Conversion Constant
+        // KDPH = WPM * 5 * 60 = WPM * 300
+        const FACTOR = 300;
+
+        function validateAndConvert(source, value) {
+            // Reset errors
+            wpmInput.classList.remove('error-input');
+            kdphInput.classList.remove('error-input');
+            wpmError.classList.remove('visible');
+            kdphError.classList.remove('visible');
+
+            if (value === "") {
+                if (source === 'wpm') kdphInput.value = "";
+                else wpmInput.value = "";
+                return;
+            }
+
+            const numValue = parseFloat(value);
+
+            // Validation: Must be a number and non-negative
+            if (isNaN(numValue) || numValue < 0) {
+                if (source === 'wpm') {
+                    wpmInput.classList.add('error-input');
+                    wpmError.classList.add('visible');
+                    kdphInput.value = "";
+                } else {
+                    kdphInput.classList.add('error-input');
+                    kdphError.classList.add('visible');
+                    wpmInput.value = "";
+                }
+                return;
+            }
+
+            // Calculation
+            if (source === 'wpm') {
+                const result = numValue * FACTOR;
+                // Format: If integer, no decimals. If float, max 2 decimals.
+                kdphInput.value = Number.isInteger(result) ? result : result.toFixed(2);
+            } else {
+                const result = numValue / FACTOR;
+                wpmInput.value = Number.isInteger(result) ? result : result.toFixed(2);
+            }
+        }
+
+        wpmInput.addEventListener('input', (e) => {
+            validateAndConvert('wpm', e.target.value);
+        });
+
+        kdphInput.addEventListener('input', (e) => {
+            validateAndConvert('kdph', e.target.value);
+        });
+    </script>
+</body>
+
+</html>

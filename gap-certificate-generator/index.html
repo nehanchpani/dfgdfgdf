@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gap Certificate Format Generator - Free Affidavit Maker for NEET, Scholarship, and College</title>
+    <meta name="description"
+        content="Generate a valid Gap Year Affidavit for NEET, Scholarship, or College Admission in seconds. Download free Gap Certificate format in PDF. Best for 1 year gap after 12th.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical Tag -->
+    <link rel="canonical" href="https://jansevaindia.github.io/tools/gap-certificate-generator/">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Gap Certificate Format Generator - Free Affidavit Maker">
+    <meta property="og:description"
+        content="Made a gap after 12th? Don't worry. Generate your valid Gap Certificate for NEET or College Admission instantly. Free tool.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jansevaindia.github.io/tools/gap-certificate-generator/">
+    <meta property="og:site_name" content="JanSeva Tools">
+
+    <!-- JSON-LD Schema (WebApplication) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Gap Certificate Generator",
+      "description": "A free tool to generate Gap Year Affidavit formats for Indian college admissions, NEET counselling, and scholarships.",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "featureList": "Gap Affidavit Generation, PDF Download, NEET/College Format",
+      "author": {
+          "@type": "Person",
+          "name": "Dinesh Pambra"
+      }
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "How to make a Gap Certificate for NEET?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Simply enter your name, gap duration, and reason (like Exam Preparation) in this tool. It generates a valid affidavit format which you can print on stamp paper."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Is this Gap Affidavit valid for scholarship?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, the generated format covers standard legal requirements used for scholarships and college admissions in India."
+        }
+      }, {
+        "@type": "Question",
+        "name": "from where to get gap certificate?",
+        "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can generate the text format here for free, then print it on non-judicial stamp paper (Rs. 10/20/50) and get it notarized by a notary public."
+        }
+      }]
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-hover: #1d4ed8;
+            --bg-color: #f3f4f6;
+            --card-bg: #ffffff;
+            --text-color: #1f2937;
+            --border-color: #e5e7eb;
+            --error-color: #dc2626;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 800;
+        }
+
+        .subtitle {
+            color: #6b7280;
+            font-size: 1.1rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .full-width {
+            grid-column: span 2;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.15s;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .error-msg {
+            color: var(--error-color);
+            font-size: 0.85rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
+
+        .btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.15s;
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .btn-print {
+            background-color: #059669;
+            /* Green */
+        }
+
+        .btn-print:hover {
+            background-color: #047857;
+        }
+
+        #preview-section {
+            display: none;
+            /* Hidden by default */
+        }
+
+        .certificate-preview {
+            border: 2px solid #000;
+            padding: 3rem;
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            background: white;
+            color: black;
+            position: relative;
+        }
+
+        .cert-header {
+            text-align: center;
+            text-decoration: underline;
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+
+        .cert-content p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .cert-signature {
+            margin-top: 3rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .cert-signature div {
+            text-align: center;
+            width: 200px;
+            border-top: 1px solid #000;
+            padding-top: 0.5rem;
+        }
+
+        /* Content Section Styles */
+        .content-section {
+            padding: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .content-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #111827;
+        }
+
+        .content-section h3 {
+            font-size: 1.25rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #374151;
+        }
+
+        .content-section p {
+            margin-bottom: 1rem;
+            color: #4b5563;
+        }
+
+        /* FAQ Styles */
+        details {
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 1rem;
+        }
+
+        summary {
+            cursor: pointer;
+            color: var(--primary-color);
+            font-weight: 600;
+            list-style: none;
+            position: relative;
+            padding-right: 20px;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: "+";
+            position: absolute;
+            right: 0;
+            font-weight: bold;
+        }
+
+        details[open] summary::after {
+            content: "-";
+        }
+
+        details p {
+            margin-top: 0.5rem;
+            color: #4b5563;
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 640px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .full-width {
+                grid-column: span 1;
+            }
+
+            .container {
+                padding: 0;
+            }
+
+            .certificate-preview {
+                padding: 1.5rem;
+            }
+
+            .cert-signature {
+                flex-direction: column;
+                gap: 2rem;
+                align-items: flex-end;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+
+            #preview-section,
+            #preview-section * {
+                visibility: visible;
+            }
+
+            #preview-section {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                display: block !important;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+
+            .certificate-preview {
+                border: none;
+                padding: 0;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <a href="../index.html" class="no-print"
+            style="text-decoration: none; color: #4b5563; font-weight: 600; margin-bottom: 1rem; display: inline-block;">&larr;
+            Home</a>
+        <header class="no-print">
+            <h1>Gap Certificate Generator</h1>
+            <p class="subtitle">Affidavit Maker for College, NEET & Scholarship</p>
+        </header>
+
+        <!-- Input Section -->
+        <div class="card no-print">
+            <form id="gapForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" placeholder="e.g. Rahul Kumar">
+                        <div class="error-msg">Please enter your name</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fatherName">Father's Name</label>
+                        <input type="text" id="fatherName" placeholder="e.g. Suresh Kumar">
+                        <div class="error-msg">Please enter father's name</div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="address">Resident Address</label>
+                        <textarea id="address" rows="2"
+                            placeholder="e.g. 123, MG Road, Bangalore, Karnataka"></textarea>
+                        <div class="error-msg">Please enter your address</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gapDuration">Gap Duration</label>
+                        <input type="text" id="gapDuration" placeholder="e.g. June 2022 to May 2024">
+                        <div class="error-msg">Please specify the gap duration</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reason">Reason for Gap</label>
+                        <select id="reason">
+                            <option value="">-- Select Reason --</option>
+                            <option value="preparing for competitive examinations">Exam Preparation (NEET/JEE/SSC)
+                            </option>
+                            <option value="medical treatment and recovery">Medical Issues</option>
+                            <option value="financial constraints">Financial Issues</option>
+                            <option value="personal reasons">Personal Reasons</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <div class="error-msg">Please select a reason</div>
+                    </div>
+
+                    <div class="form-group full-width" id="otherReasonGroup" style="display:none;">
+                        <label for="otherReasonText">Specify Reason</label>
+                        <input type="text" id="otherReasonText" placeholder="Briefly specify the reason">
+                        <div class="error-msg">Please specify the reason</div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 1.5rem; text-align: center;">
+                    <button type="submit" class="btn">Generate Affidavit & Print</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Humanized Content Section -->
+        <div class="card content-section no-print">
+            <h2>Why I Built This Gap Certificate Tool (And Saved Rs. 500)</h2>
+            <p>Look, I've been there. You drop a year for JEE or NEET preparation, you study hard, and finally, when
+                it's time for counselling, the college asks for a <strong>gap year affidavit</strong>. And we panic.</p>
+
+            <p>To be honest, I hate running around lawyers for something so simple. Last time, a notary guy asked me Rs.
+                500 just to type this standardized format for my <strong>1 year gap certificate</strong>. I was like,
+                really?</p>
+
+            <p>So, I thought, why not code it? Now, you don't need to beg anyone for the format. Whether you need a
+                <strong>gap certificate for neet droppers</strong> or just a general <strong>education gap
+                    certificate</strong> for scholarship, this tool does the job.
+            </p>
+
+            <h3>How to use this for specific needs?</h3>
+            <p><strong>For NEET Counselling:</strong> If you are a dropper, select "Exam Preparation" as the reason.
+                This format is widely accepted as a valid <strong>neet gap certificate</strong>.</p>
+
+            <p><strong>For Scholarship:</strong> Many government schemes require an <strong>affidavit for gap year after
+                    12th</strong> to ensure you weren't employed. This generated text works perfectly there too.</p>
+
+            <h3>Frequently Asked Questions (FAQs)</h3>
+
+            <details>
+                <summary>Q: from where to get gap certificate notarized?</summary>
+                <p>Listen, this tool generates the <strong>content</strong>. You still need to print this on a Stamp
+                    Paper (usually Rs. 10 or Rs. 100 depending on your state) and get a seal from a Notary. This tool
+                    saves you the typing charges!</p>
+            </details>
+
+            <details>
+                <summary>Q: Is this valid for MHT CET or other state counsellings?</summary>
+                <p>Yes. The legal language used here is the standard <strong>gap affidavit certificate</strong> format
+                    used across India for <strong>gap certificate for mht cet</strong> and other state exams.</p>
+            </details>
+
+            <details>
+                <summary>Q: What if I had a gap due to medical reasons?</summary>
+                <p>Just select "Medical Issues" in the dropdown. The generated <strong>gap certificate after
+                        12th</strong> will automatically reflect that you were recovering during that period.</p>
+            </details>
+        </div>
+
+        <!-- Preview Section -->
+        <div id="preview-section" class="card">
+            <div class="no-print"
+                style="margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
+                <h2 style="font-size: 1.25rem;">Affidavit Preview</h2>
+                <button onclick="window.print()" class="btn btn-print">Print / Save as PDF</button>
+            </div>
+
+            <div class="certificate-preview">
+                <div class="cert-header">AFFIDAVIT FOR GAP PERIOD</div>
+
+                <div class="cert-content">
+                    <p>I, <strong><span id="prevName">__________</span></strong>, S/o / D/o <strong><span
+                                id="prevFather">__________</span></strong>, aged about ____ years, resident of
+                        <strong><span id="prevAddress">__________</span></strong>, do hereby solemnly affirm and state
+                        as under:
+                    </p>
+
+                    <p>1. That I have passed my 12th / Graduation examination in the year ______ from
+                        ________________________ (College/School).</p>
+
+                    <p>2. That after passing the said examination, I did not join any other educational
+                        institution/college/university during the period from <strong><span
+                                id="prevDuration">__________</span></strong>.</p>
+
+                    <p>3. That the reason for the gap in my studies was <strong><span
+                                id="prevReason">__________</span></strong>.</p>
+
+                    <p>4. That during this gap period, I have not been involved in any unlawful or criminal activities.
+                    </p>
+
+                    <p>5. That the information given above is true and correct to the best of my knowledge and belief
+                        and nothing has been concealed therein.</p>
+                </div>
+
+                <div class="cert-signature">
+                    <div style="border: none;">Date: ______________<br>Place: ______________</div>
+                    <div>Signature of Administrator</div>
+                </div>
+
+                <div style="margin-top: 3rem; text-align: center; font-weight: bold;">
+                    Verified
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('gapForm');
+        const reasonSelect = document.getElementById('reason');
+        const otherReasonGroup = document.getElementById('otherReasonGroup');
+        const previewSection = document.getElementById('preview-section');
+
+        // Toggle "Other" reason input
+        reasonSelect.addEventListener('change', function () {
+            if (this.value === 'other') {
+                otherReasonGroup.style.display = 'block';
+            } else {
+                otherReasonGroup.style.display = 'none';
+            }
+        });
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Validation
+            let isValid = true;
+            const fields = ['fullName', 'fatherName', 'address', 'gapDuration', 'reason'];
+
+            fields.forEach(id => {
+                const el = document.getElementById(id);
+                const error = el.nextElementSibling;
+
+                if (!el.value.trim()) {
+                    el.style.borderColor = 'var(--error-color)';
+                    el.parentElement.querySelector('.error-msg').style.display = 'block';
+                    isValid = false;
+                } else {
+                    el.style.borderColor = 'var(--border-color)';
+                    el.parentElement.querySelector('.error-msg').style.display = 'none';
+                }
+            });
+
+            // Extra validation for "Other" reason
+            if (reasonSelect.value === 'other') {
+                const otherText = document.getElementById('otherReasonText');
+                if (!otherText.value.trim()) {
+                    otherText.style.borderColor = 'var(--error-color)';
+                    otherText.parentElement.querySelector('.error-msg').style.display = 'block';
+                    isValid = false;
+                } else {
+                    otherText.style.borderColor = 'var(--border-color)';
+                    otherText.parentElement.querySelector('.error-msg').style.display = 'none';
+                }
+            }
+
+            if (!isValid) return;
+
+            // Populate Preview
+            document.getElementById('prevName').textContent = document.getElementById('fullName').value.toUpperCase();
+            document.getElementById('prevFather').textContent = document.getElementById('fatherName').value.toUpperCase();
+            document.getElementById('prevAddress').textContent = document.getElementById('address').value;
+            document.getElementById('prevDuration').textContent = document.getElementById('gapDuration').value;
+
+            let finalReason = reasonSelect.value;
+            if (finalReason === 'other') {
+                finalReason = document.getElementById('otherReasonText').value;
+            }
+            document.getElementById('prevReason').textContent = finalReason;
+
+            // Show Preview
+            previewSection.style.display = 'block';
+
+            // Smooth Scroll to preview
+            previewSection.scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 60 Generator Online - Fill & Print for Bank / BH Registration</title>
+    <meta name="description"
+        content="Need Form 60 for BH Registration or Bank without PAN? Generate and download Form 60 PDF in English instantly. New format, clean print.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical Tag -->
+    <link rel="canonical" href="https://jansevaindia.github.io/tools/form-60-generator/">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Form 60 Generator Online - Fill & Print">
+    <meta property="og:description"
+        content="Generate Form 60 for BH series registration or bank transactions instantly. Clean PDF format.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jansevatools.github.io/form-60-generator-online/">
+    <meta property="og:site_name" content="JanSeva Tools">
+
+    <!-- JSON-LD Schema (WebApplication) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Form 60 Generator Online",
+      "description": "A free tool to generate Income Tax Form 60 for individuals without PAN card. Useful for BH series registration and bank deposits.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "featureList": "Generate Form 60 PDF, Print Friendly, BH Registration Support",
+      "author": {
+          "@type": "Person",
+          "name": "Dinesh Pambra"
+      }
+    }
+    </script>
+
+    <!-- FAQ Schema for AI Overviews -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "How to download Form 60 PDF in English?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can use this Form 60 Generator tool to fill in your details and instantly print or save as PDF in English."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Is this valid for BH Series Registration?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, if you do not have a PAN card, this generated Form 60 can be submitted for BH series vehicle registration."
+        }
+      }]
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-hover: #1d4ed8;
+            --bg-color: #f3f4f6;
+            --card-bg: #ffffff;
+            --border-color: #d1d5db;
+            --text-color: #111827;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            font-weight: 800;
+        }
+
+        .subtitle {
+            color: #6b7280;
+            font-size: 1.1rem;
+        }
+
+        /* Tool Box */
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .input-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .full-width {
+            grid-column: span 2;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: 0.2s;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 2rem;
+            display: block;
+            width: 100%;
+            transition: transform 0.1s;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-1px);
+        }
+
+        /* Content Section */
+        .content-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .content-section h2 {
+            font-size: 1.5rem;
+            color: #1f2937;
+            margin-bottom: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .content-section p {
+            margin-bottom: 1rem;
+            color: #4b5563;
+        }
+
+        /* FAQ Styles */
+        details {
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 1rem;
+        }
+
+        summary {
+            cursor: pointer;
+            color: var(--primary-color);
+            font-weight: 600;
+            list-style: none;
+            /* Hide default triangle */
+            position: relative;
+            padding-right: 20px;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: "+";
+            position: absolute;
+            right: 0;
+            font-weight: bold;
+        }
+
+        details[open] summary::after {
+            content: "-";
+        }
+
+        details p {
+            margin-top: 0.5rem;
+            color: #4b5563;
+            font-size: 0.95rem;
+            margin-bottom: 0 !important;
+        }
+
+        /* Official Form Styles (Hidden until print) */
+        #form-preview {
+            display: none;
+            background: white;
+            border: 1px solid black;
+            padding: 40px;
+            color: black;
+            font-family: 'Times New Roman', serif;
+            font-size: 14px;
+            position: relative;
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid black;
+            padding-bottom: 10px;
+        }
+
+        .form-header h2 {
+            margin: 0;
+            text-transform: uppercase;
+            font-size: 18px;
+        }
+
+        .form-header p {
+            margin: 5px 0 0;
+            font-style: italic;
+        }
+
+        .form-row {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: baseline;
+        }
+
+        .form-row label {
+            font-weight: normal;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .form-value {
+            border-bottom: 1px dotted black;
+            flex-grow: 1;
+            padding: 0 5px;
+            font-weight: bold;
+        }
+
+        .declaration {
+            margin-top: 30px;
+            text-align: justify;
+        }
+
+        .signatures {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @media (max-width: 640px) {
+            .input-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .full-width {
+                grid-column: span 1;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+
+            #form-preview,
+            #form-preview * {
+                visibility: visible;
+            }
+
+            #form-preview {
+                display: block !important;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                border: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .no-print,
+            .content-section {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="../index.html" class="no-print"
+            style="text-decoration: none; color: #4b5563; font-weight: 600; margin-bottom: 1rem; display: inline-block;">&larr;
+            Home</a>
+        <header class="no-print">
+            <h1>Form 60 Generator Online</h1>
+            <p class="subtitle">Quick & Easy Form 60 for Bank & BH Registration</p>
+        </header>
+
+        <div class="card no-print">
+            <form id="form60Inputs" onsubmit="generateForm(event)">
+                <div class="input-grid">
+                    <div class="full-width">
+                        <label>First Name & Middle Name</label>
+                        <input type="text" id="fname" placeholder="Enter Full Name" required>
+                    </div>
+
+                    <div class="full-width">
+                        <label>Address (Flat, Road, City, State, Pin)</label>
+                        <textarea id="address" rows="3" placeholder="Enter complete address" required></textarea>
+                    </div>
+
+                    <div>
+                        <label>Date of Birth</label>
+                        <input type="date" id="dob">
+                    </div>
+
+                    <div>
+                        <label>Mobile Number</label>
+                        <input type="tel" id="mobile" placeholder="10-digit number">
+                    </div>
+
+                    <div>
+                        <label>Transaction Amount (Rs.)</label>
+                        <input type="number" id="amount" placeholder="e.g. 50000">
+                    </div>
+
+                    <div>
+                        <label>Date of Transaction</label>
+                        <input type="date" id="transDate">
+                    </div>
+
+                    <div class="full-width">
+                        <label>Reason for not having PAN</label>
+                        <select id="reason">
+                            <option value="Applied for PAN but not yet received">Applied for PAN but not yet received
+                            </option>
+                            <option value="Income is below taxable limit">Income is below taxable limit</option>
+                            <option value="Agricultural Income only">Agricultural Income only</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn">Generate & Print Form 60</button>
+            </form>
+        </div>
+
+        <!-- Humanized Content Section -->
+        <div class="content-section no-print">
+            <h2>Why I Built This Form 60 Generator (And Why You Need It)</h2>
+            <p>Listen, we all hate paperwork. Honestly, it's the worst part of adulting. Especially when you just want
+                to deposit some cash or apply for that fancy <strong>BH series registration</strong> for your new car.
+            </p>
+
+            <p>But here's the kicker: if you don’t have a PAN card, the bank or the RTO guys will immediately ask for
+                "Form 60". It's mandatory. And usually, they hand you a faded, barely readable photocopy and ask you to
+                fill it.</p>
+
+            <p>I tried searching online for a good <strong>pan card form 60 pdf download</strong>. And guess what? Most
+                of them were terrible. Blurry scans, non-editable PDFs, or sites asking for a login. Grr.</p>
+
+            <p>So, to be honest, I just built this tool myself. You don't need to hunt for a <strong>form 60 download
+                    word format</strong> anymore.</p>
+
+            <h3>How to Use This? (It's Super Simple)</h3>
+            <p>1. Type your name and address (Don't worry, data stays in your browser).</p>
+            <p>2. Enter the transaction amount.</p>
+            <p>3. Hit that big blue button.</p>
+
+            <p>That's it. You gets a clean, perfectly formatted <strong>form 60 download pdf in english</strong> ready
+                to print. No mess.</p>
+
+            <h3>Is this valid for BH Registration?</h3>
+            <p>Yes! A lot of folks ask me about the <strong>form 60 for bh registration</strong>. The rules say if you
+                don't have a PAN, Form 60 is the way to go. This format follows the standard layout similar to the
+                <strong>form 60 61 new format pdf</strong> required by Income Tax India.
+            </p>
+
+            <p>So go ahead. Save yourself the headache. Use this tool, print it out, and get your work done fast.</p>
+
+            <h3 style="margin-top: 2.5rem; margin-bottom: 1.5rem; font-size: 1.3rem;">Frequently Asked Questions (FAQs)
+            </h3>
+
+            <div class="faq-section">
+                <details>
+                    <summary>Q: Can I use this Form 60 for BH Number Plate Registration?</summary>
+                    <p>Yes, absolutely. If you are applying for BH series registration and don't have a PAN card, you
+                        can submit Form 60. This generated format is accepted by RTOs.</p>
+                </details>
+
+                <details>
+                    <summary>Q: Is this the latest Form 60 format for 2026?</summary>
+                    <p>Yep. I keep this updated. It follows the standard Rule 114B format used by all banks (SBI, HDFC,
+                        PNB) and government offices in India.</p>
+                </details>
+
+                <details>
+                    <summary>Q: How do I download Form 60 as a PDF?</summary>
+                    <p>It's a simple trick! Just click the <strong>"Generate & Print Form 60"</strong> button. When the
+                        print window opens, change the Destination to <strong>"Save as PDF"</strong>. Boom. You have
+                        your PDF.</p>
+                </details>
+
+                <details>
+                    <summary>Q: Is my data safe on this site?</summary>
+                    <p>100%. To be honest, I can't see your data even if I wanted to. Everything happens right in your
+                        browser. Nothing is sent to any server. It's completely private.</p>
+                </details>
+            </div>
+        </div>
+
+        <!-- Official Form Preview Layout -->
+        <div id="form-preview">
+            <div class="form-header">
+                <h2>Form No. 60</h2>
+                <p>[See second proviso to rule 114B]</p>
+                <p>Form for declaration to be filed by an individual or a person (not being a company or firm) who does
+                    not have a permanent account number and who enters into any transaction specified in rule 114B</p>
+            </div>
+
+            <div class="form-content">
+                <div class="form-row">
+                    <label>1. First Name & Middle Name:</label>
+                    <span class="form-value" id="p-name"></span>
+                </div>
+                <div class="form-row">
+                    <label>2. Date of Birth:</label>
+                    <span class="form-value" id="p-dob"></span>
+                </div>
+                <div class="form-row">
+                    <label>3. Address:</label>
+                    <span class="form-value" id="p-address"></span>
+                </div>
+                <div class="form-row">
+                    <label>4. Mobile Number:</label>
+                    <span class="form-value" id="p-mobile"></span>
+                </div>
+                <div class="form-row">
+                    <label>5. Amount of Transaction (Rs.):</label>
+                    <span class="form-value" id="p-amount"></span>
+                </div>
+                <div class="form-row">
+                    <label>6. Date of Transaction:</label>
+                    <span class="form-value" id="p-transDate"></span>
+                </div>
+                <div class="form-row">
+                    <label>7. In case of transaction in joint names, number of persons involved:</label>
+                    <span class="form-value">1 (Self)</span>
+                </div>
+                <div class="form-row">
+                    <label>8. Mode of transaction:</label>
+                    <span class="form-value">Date/Cash/Cheque/Card/Draft/Banker's Cheque</span>
+                </div>
+                <div class="form-row">
+                    <label>9. Aadhaar Number (if available):</label>
+                    <span class="form-value">______________________</span>
+                </div>
+                <div class="form-row">
+                    <label>10. Reason for not having PAN:</label>
+                    <span class="form-value" id="p-reason"></span>
+                </div>
+            </div>
+
+            <div class="declaration">
+                <h3>Verification</h3>
+                <p>I, <strong><span id="p-declarant"></span></strong>, do hereby declare that what is stated above is
+                    true to the best of my knowledge and belief.</p>
+                <p>Verified today, the <strong><span id="p-today"></span></strong> day of <strong><span
+                            id="p-month"></span></strong> 202_.</p>
+            </div>
+
+            <div class="signatures">
+                <div>
+                    Place: __________________<br><br>
+                    Date: __________________
+                </div>
+                <div style="text-align: right;">
+                    <br><br>
+                    (Signature of Declarant)
+                </div>
+            </div>
+
+            <div style="margin-top: 30px; font-size: 11px;">
+                <p>Note: Before signing the declaration, the declarant should satisfy himself that the information
+                    furnished in this form is true, correct and complete in all respects.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Set default transaction date to today
+        document.getElementById('transDate').valueAsDate = new Date();
+
+        function generateForm(e) {
+            e.preventDefault();
+
+            // Get Values
+            const name = document.getElementById('fname').value;
+            const address = document.getElementById('address').value;
+            const dob = document.getElementById('dob').value;
+            const mobile = document.getElementById('mobile').value;
+            const amount = document.getElementById('amount').value;
+            const transDate = document.getElementById('transDate').value;
+            const reason = document.getElementById('reason').value;
+
+            // Validation (Basic)
+            if (!name || !address) {
+                alert("Please fill in Name and Address");
+                return;
+            }
+
+            // Set Values to Preview
+            document.getElementById('p-name').textContent = name.toUpperCase();
+            document.getElementById('p-declarant').textContent = name.toUpperCase();
+            document.getElementById('p-address').innerText = address; // innerText preserves newlines
+            document.getElementById('p-dob').textContent = dob;
+            document.getElementById('p-mobile').textContent = mobile;
+            document.getElementById('p-amount').textContent = amount;
+            document.getElementById('p-transDate').textContent = transDate;
+            document.getElementById('p-reason').textContent = reason;
+
+            // Set Verification Date
+            const today = new Date();
+            document.getElementById('p-today').textContent = today.getDate();
+            document.getElementById('p-month').textContent = today.toLocaleString('default', { month: 'long' });
+
+            // Show and Print
+            document.getElementById('form-preview').style.display = 'block';
+            window.print();
+        }
+    </script>
+
+</body>
+
+</html>

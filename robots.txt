@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jansevaindia.github.io/tools/sitemap.xml
